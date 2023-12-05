@@ -1,27 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app">
-        <a href="https://vitejs.dev" target="_blank" id="vitelink">
-          <img id="viteimg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img id="jsimg" class="logo vanilla" alt="JavaScript logo" />
-        </a>
-        <h1>Hello Vite!</h1>
-        <div class="card">
-          <button id="counter" type="button"></button>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>A Paper.js test</h1>
+            <canvas id="myCanvas" resize></canvas>
+
+            <!-- <div class="card">
+                <button id="counter" type="button"></button>
+            </div> -->
+    
         </div>
-        <p class="read-the-docs">
-          Click on the Vite logo to learn more
-        </p>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+        <!-- <script type="module" src="/main.js"></script> -->
+        <script type="text/javascript" src="src/paper-full.js"></script>
+        <script type="text/paperscript" src="../papertest.js" canvas="myCanvas"></script>
+    </body>
 </html>

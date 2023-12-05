@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "paper": "^0.12.17"
   }
 }

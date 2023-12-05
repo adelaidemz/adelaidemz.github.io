@@ -6,20 +6,27 @@
         <link rel="stylesheet" href="./style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
-    </head>
-
-    <body>
-        <div id="app">
-            <h1>A Paper.js test</h1>
-            <canvas id="myCanvas" resize></canvas>
-
-            <!-- <div class="card">
-                <button id="counter" type="button"></button>
-            </div> -->
-    
-        </div>
         <!-- <script type="module" src="/main.js"></script> -->
         <script type="text/javascript" src="src/paper-full.js"></script>
         <script type="text/paperscript" src="../papertest.js" canvas="myCanvas"></script>
+    </head>
+
+    <body>
+        <p style="font-style:italic">This page is a work in progress</p>
+        <div id="app">
+            <div class="link-container">
+                <h2>Some other projects</h2>
+                <div class="card">
+                    <a href="https://adelaidemz.github.io/sorting">Sorting hues</a>
+                </div>
+                <div class="card">
+                    <a href="https://adelaidemz.github.io/artist-collab">Collaboration visualizer</a>
+                </div>
+            </div>
+            <div class="canvas-container">
+                <h2>A Paper.js test</h2>
+                <canvas id="myCanvas"></canvas>
+            </div>
+        </div>
     </body>
 </html>

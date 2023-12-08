@@ -11,7 +11,7 @@ const cards = [
 	image: '/rpart-dt.png',
 	text: `Machine learning project to classify visible night sky bodies 
 	 (KNN, random forest, AdaBoost)`, 
-	link: 'stellar/index.html',
+	link: 'pages/stellar',
 	},
   { title: 'Artist collabs (WIP)', 
 	image: '/collab-card-img.png',

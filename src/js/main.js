@@ -1,4 +1,4 @@
-import { Popover } from 'bootstrap';
+import {  } from 'bootstrap';
 
 const cards = [
   { title: 'Sorting hues', 
@@ -12,6 +12,11 @@ const cards = [
 	text: `Machine learning project to classify visible night sky bodies 
 	 (KNN, random forest, AdaBoost)`, 
 	link: 'pages/stellar',
+	},
+  { title: 'Markov chain name generation', 
+	  image: '/markov.png',
+	  text: 'Using a markov chain to generate new stylized names.', 
+	  link: 'pages/markov', 
 	},
   { title: 'Artist collabs (WIP)', 
 	image: '/collab-card-img.png',
@@ -37,13 +42,4 @@ cards.forEach(card => {
 
 });
 // <a href=${card.source_link} class="card-link">Source</a>
-// Create an example popover
-document.querySelectorAll('[data-bs-toggle="popover"]')
-  .forEach(popover => {
-    new Popover(popover)
-  })
 
-// import { setupCounter } from './counter.js'
-
-
-// setupCounter(document.querySelector('#counter'))

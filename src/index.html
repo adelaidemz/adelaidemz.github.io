@@ -13,9 +13,15 @@
 
    <body>
         <div class="container-md p-5">
-            <header>
+            <header class="mb-4">
                 <h1 class="display-5">Adelaide Zhang</h1>
                 <p style="font-style:italic">This page is a work in progress</p>
+                <div class="d-flex gap-2">
+                    <a class="icon-link" href="https://www.linkedin.com/in/adelaide-zhang"><i class="bi bi-linkedin"></i></a>
+                    <a class="icon-link" href="https://github.com/adelaidemz/">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div> 
             </header>
             <main class="row gap-4">
             
@@ -31,7 +37,12 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative" tabindex="0">
+                                <div class="position-absolute top-0 end-0">
+                                    <a class="icon-link" href="/Adelaide_Zhang_resume.pdf" download>
+                                        Get a copy<i class="bi bi-file-earmark-pdf"></i>
+                                    </a>
+                                </div>
                                 <h3 id="scrollspyHeading1">Education</h4>
                                     <dl class="row">
                                         <dt class="col-sm-6">Master's in Computer Science</dt>
@@ -59,10 +70,10 @@
                                     </ul>
                                 <h3 id="scrollspyHeading3">Skills</h3>
                                     <dl class="row">
-                                        <dt class="col-sm-6">Languages</dt>
-                                        <dd class="col-sm-6">Python, JavaScript, TypeScript, Bash, C++, R, SQL</dd>
-                                        <dt class="col-sm-6">Tools & Frameworks</dt>
-                                        <dd class="col-sm-6">Git, Qt, Linux, React, Next.js, Vue, Firebase, Agile (Scrum)</dd>  
+                                        <dt class="col-sm-4">Languages</dt>
+                                        <dd class="col-sm-8">Python, JavaScript, TypeScript, Bash, C++, R, SQL</dd>
+                                        <dt class="col-sm-4">Tools & Frameworks</dt>
+                                        <dd class="col-sm-8">Git, Qt, Linux, React, Next.js, Vue, Firebase, Agile (Scrum)</dd>  
                                     </dl>
                             </div>
                         </div>

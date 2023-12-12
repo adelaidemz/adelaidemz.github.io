@@ -51,7 +51,7 @@ $card-height: 100%;
 @import "bootstrap/scss/reboot";
 
 @import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
@@ -69,7 +69,7 @@ $card-height: 100%;
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
@@ -90,7 +90,7 @@ $card-height: 100%;
 //
 // Custom styles
 //
-
+@import "bootstrap-icons/font/bootstrap-icons.css";
 // @import "icon-list";
 
 body {

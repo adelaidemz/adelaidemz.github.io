@@ -37,7 +37,7 @@ const cards = [
 
 export default function Home() {    
     return (
-        <Stack w="70%" m="auto" pt={20} align="center">
+        <Stack w={{base: "95%", md: "80%", lg: "65%"}} m="auto" pt={20} align="center">
             <Heading>Adelaide Zhang</Heading>
             <Text >This page is a work in progress</Text>
 
@@ -52,14 +52,14 @@ export default function Home() {
             </Stack>
 
             <Tabs isFitted>
-                <TabList m={5}>
+                <TabList m={4}>
                     <Tab>Projects</Tab>
                     <Tab>Resume</Tab>
                 </TabList>
 
                 <TabPanels>
-                    <TabPanel w="3xl">
-                        <SimpleGrid columns={2} spacing={5}>
+                    <TabPanel px={4}>
+                        <SimpleGrid columns={{base: 1, lg: 2}} spacing={5}>
                             {cards.map((card) => (
                                 <ProjectCard
                                     key={card.title}
@@ -71,7 +71,7 @@ export default function Home() {
                             ))}
                         </SimpleGrid>
                     </TabPanel>
-                    <TabPanel w="3xl">
+                    <TabPanel>
                         <Resume />
                     </TabPanel>
                 </TabPanels>

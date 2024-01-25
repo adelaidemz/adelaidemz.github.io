@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard.jsx"
+import Resume from "./pages/resume.jsx"
 import { Heading, SimpleGrid, Text, VStack,
 Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
@@ -35,7 +36,7 @@ const cards = [
 
 export default function Home() {    
     return (
-        <VStack pt={20} >
+        <VStack pt={20}>
             <Heading>Adelaide Zhang</Heading>
             <Text >This page is a work in progress</Text>
 
@@ -57,11 +58,10 @@ export default function Home() {
                                 link={card.link}
                                 srclink={card.source_link} />
                         ))}
-                
                         </SimpleGrid>
                     </TabPanel>
                     <TabPanel w="3xl">
-                        <p>Resume here</p>
+                        <Resume />
                     </TabPanel>
                 </TabPanels>
             </Tabs>

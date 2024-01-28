@@ -2,13 +2,11 @@ import { Heading, SimpleGrid, Text, Stack, UnorderedList, ListItem } from '@chak
 
 export default function Resume() {
     return (
-        <Stack align="start">
+        <Stack align="start" w="100%">
             <Heading size="lg">Education</Heading>
             <SimpleGrid columns={2} columnGap={10} rowGap={2}>
                 <Text as='b'>Master's in Computer Science</Text>
                 <Text>New York University</Text>
-            {/* </Stack>
-            <Stack direction="row"> */}
                 <Text as='b'>Bachelor of Fine Arts</Text>
                 <Text>Carnegie Mellon University</Text>
             </SimpleGrid>

@@ -34,7 +34,7 @@ export default function Home() {
                 <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
             </Stack>
 
-            <Box overflowY="scroll" h="100%">
+            <Box overflowY="scroll" h="100%" w="100%">
                 <Page changePage={(page) => { setPage(() => componentPages[page])} }/>
             </Box>
 

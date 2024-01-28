@@ -7,9 +7,42 @@ const first_names = data.first_names;
 const last_names = data.last_names;
 const blacklist_names = data.blacklist;
 
+// populate input data
+const first_list = document.querySelector('#first-names-list');
+first_names.forEach(name => {
+	first_list.innerHTML += `<li class="list-group-item">${name}</li>`
+});
+
+const last_list = document.querySelector('#last-names-list');
+last_names.forEach(name => {
+	last_list.innerHTML += `<li class="list-group-item">${name}</li>`
+});
+
+const blacklist = document.querySelector('#blacklist-list');
+blacklist_names.forEach(name => {
+	blacklist.innerHTML += `<li class="list-group-item">${name}</li>`
+});
+
+const out_list = document.querySelector('#out-names-list');
+
+function displayOutput(names) {
+    out_list.innerHTML = "";
+    names.forEach(name => {
+        out_list.innerHTML += `<li class="list-group-item">${name}</li>`
+    });
+}
+
+// setup button and display inital output names
+export function setupButton(element) {
+    element.addEventListener('click', () => displayOutput(generateNames(NUM_NAMES, ORDER)))
+  }
+
+setupButton(document.querySelector('#regen-button'));
+displayOutput(generateNames(NUM_NAMES, ORDER));
+
 // functions
 
-export function generateNames(numNames, markovOrder) {
+function generateNames(numNames, markovOrder) {
     var firstData = initializeMarkovData(first_names, markovOrder);
     var lastData = initializeMarkovData(last_names, markovOrder);
     
@@ -26,7 +59,7 @@ export function generateNames(numNames, markovOrder) {
     return newNames;
 }
 
-export function initializeMarkovData(sourceData, markovOrder) {
+function initializeMarkovData(sourceData, markovOrder) {
     var markovData = {};
   
     for (var index = 0; index < sourceData.length; index++) {
@@ -53,7 +86,7 @@ export function initializeMarkovData(sourceData, markovOrder) {
     return markovData;
   };
 
-export function makeNewNames(numNames, markovOrder, markovData, sourceNames, blacklistNames) {
+function makeNewNames(numNames, markovOrder, markovData, sourceNames, blacklistNames) {
   
     var newNames = [];
     for (var newNameIndex = 0; newNameIndex < numNames; newNameIndex++) {

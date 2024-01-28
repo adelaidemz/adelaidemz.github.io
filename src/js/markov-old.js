@@ -1,4 +1,4 @@
-import data from './markov-names.json';
+import data from '../data/markov-names.json';
 
 const ORDER = 2;
 const NUM_NAMES = 100;

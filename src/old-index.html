@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <link rel="stylesheet" href="scss/styles.scss"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Homepage</title>
+        <!-- <script type="module" src="js/twotest.js"></script> -->
+        <!-- <script type="text/javascript" src="js/paper-full.js"></script> -->
+        <!-- <script type="text/paperscript" src="../papertest.js" canvas="myCanvas"></script> -->
+        <script type="module" src="js/main.js"></script>
+    </head>
+
+   <body class="container-md">
+        <div class="row justify-content-center">
+        <div class="col-10 col-sm-8 p-5">
+            <header class="mb-4">
+                <h1 class="display-5">Adelaide Zhang</h1>
+                <p style="font-style:italic">This page is a work in progress</p>
+                <div class="d-flex gap-2">
+                    <a class="icon-link" href="https://www.linkedin.com/in/adelaide-zhang"><i class="bi bi-linkedin"></i></a>
+                    <a class="icon-link" href="https://github.com/adelaidemz/">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div> 
+            </header>
+            <main class="row gap-4 justify-content-center">
+            
+                <div class="col">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-projects-tab" data-bs-toggle="tab" data-bs-target="#nav-projects" type="button" role="tab" aria-controls="nav-projects" aria-selected="true">Some Projects</button>
+                        <button class="nav-link" id="nav-resume-tab" data-bs-toggle="tab" data-bs-target="#nav-resume" type="button" role="tab" aria-controls="nav-resume" aria-selected="false">Resume</button>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3" id="card-container">
+            
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
+                            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative" tabindex="0">
+                                <div class="position-absolute top-0 end-0">
+                                    <a class="icon-link" href="/Adelaide_Zhang_resume.pdf" download>
+                                        Get a copy<i class="bi bi-file-earmark-pdf"></i>
+                                    </a>
+                                </div>
+                                <h3 id="scrollspyHeading1">Education</h4>
+                                    <dl class="row">
+                                        <dt class="col-sm-6">Master's in Computer Science</dt>
+                                        <dd class="col-sm-6">New York University</dd>
+                                        <dt class="col-sm-6">Bachelor's of Fine Arts</dt>
+                                        <dd class="col-sm-6">Carnegie Mellon University</dd>  
+                                    </dl>
+                                <h3 id="scrollspyHeading2">Experience</h3>
+                                    <h6><strong>Research Assistant</strong></h6>
+                                    <p><em>NYU Music & Audio Research Laboratory / New York, NY</em></p>
+                                    <p>Led data collection for a pilot study regarding subway noise levels, covering 30 NYC subway stations</p>
+                                    <ul>
+                                        <li>Collected audio level data and real-time annotations, and incorporated metadata, resulting in a comprehensive dataset of 32K observations</li>
+                                        <li>Utilized Python and R to perform statistical analyses and determine patterns of loudness</li>
+                                    </ul>
+                                    <h6><strong>Software Engineer - Electronic Libretto System</strong></h6>
+                                    <p><em>The Santa Fe Opera / Santa Fe, NM                            </em></p>
+                                    <p>Developed and maintained software for Electronic Libretto System, enabling simultaneous display of 
+                                        translated opera titles on ~2300 networked single-board computers</p>
+                                    <ul>
+                                        <li>Created Linux application using C++ and Qt for database editing and real-time performance control</li>
+                                        <li>Created UI and UX for patron interaction, cross-compiled image for Raspberry Pi based hardware</li>
+                                        <li>Wrote Bash scripts to query units, start remote processes, and perform functionality tests</li>
+                                        <li>Documented progress during the development process and wrote user guide for future operators</li>
+                                    </ul>
+                                <h3 id="scrollspyHeading3">Skills</h3>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">Languages</dt>
+                                        <dd class="col-sm-8">Python, JavaScript, TypeScript, Bash, C++, R, SQL</dd>
+                                        <dt class="col-sm-4">Tools & Frameworks</dt>
+                                        <dd class="col-sm-8">Git, Qt, Linux, React, Next.js, Vue, Firebase, Agile (Scrum)</dd>  
+                                    </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-3">
+                    <h5>Two.js</h5>
+                    <div class="two">
+        
+                    </div>
+                </div> -->
+            </main>
+        </div>
+        </div>
+    </body>
+</html>

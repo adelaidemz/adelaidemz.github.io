@@ -1,0 +1,44 @@
+[
+    { 
+        "id": 0,
+        "title": "Sorting hues",
+        "category": "React",
+        "image": "/sorting-card-img.png",
+        "text": "A colorful visualizer of some iterative sorting algorithms. React, Typescript, and Vite", 
+        "link": "https://adelaidemz.github.io/sorting", 
+        "source_link": "https://github.com/adelaidemz/sorting"
+    },
+    { 
+        "id": 1,
+        "title": "Stellar classification", 
+        "category": "Machine learning",
+        "image": "/rpart-dt.png",
+        "text": "NYU term project paper, classifying visible night sky bodies (KNN, random forest, AdaBoost)", 
+        "link": "component"
+    },
+    { 
+        "id": 2,
+        "title": "Markov chain name generation", 
+        "category": "Javascript",
+        "image": "/markov.png",
+        "text": "Uses a markov chain to generate stylized names using Javascript.", 
+        "link": "component"
+      },
+    { 
+        "id": 3,
+        "title": "API Microservices (FreeCodeCamp)", 
+        "category": "Backend API",
+        "image": "/fcc.png",
+        "text": "Projects for FreeCodeCamp\"s Backend Development and APIs course. Node and Express, hosted on Render.", 
+        "link": "https://microservices-fcc-ejkz.onrender.com"
+      },
+    { 
+        "id": 4,
+        "title": "Artist collabs (WIP)", 
+        "category": "React & D3",
+        "image": "/collab-card-img.png",
+        "text": "Network view of musical artist collaborations. React and D3.", 
+        "link": "https://adelaidemz.github.io/artist-collab", 
+        "source_link": "https://github.com/adelaidemz/artist-collab"
+    }
+]

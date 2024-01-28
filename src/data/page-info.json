@@ -1,7 +1,7 @@
 [
     { 
         "id": 0,
-        "title": "Sorting hues",
+        "title": "Sorting visualization",
         "category": "React",
         "image": "/sorting-card-img.png",
         "text": "A colorful visualizer of some iterative sorting algorithms. React, Typescript, and Vite", 

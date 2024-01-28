@@ -5,7 +5,7 @@ import Markov from "./components/markov.jsx";
 import Stellar from "./components/stellar.jsx";
 
 import { useState } from 'react';
-import { Button, Container, Heading, IconButton, SimpleGrid, Text, Stack,
+import { Button, Box, Container, Heading, IconButton, SimpleGrid, Text, Stack,
 Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 
@@ -20,12 +20,11 @@ export default function Home() {
     const [Page, setPage] = useState(() => ProjectsResume);
 
     return (
-        // <Stack w={{base: "95%", md: "80%", lg: "65%"}} m="auto" pt={20} align="center">
-        <Container maxW={{base: "95%", md: "80%", lg: "70%"}} py={20} centerContent>
+        <Container maxW={{base: "95%", md: "80%", xl: "70%"}} h="100%" pt={20} centerContent>
             <Heading>Adelaide Zhang</Heading>
             <Text as="i">This page is a work in progress</Text>
 
-            <Stack direction="row" spacing={4} pt={6}>
+            <Stack direction="row" spacing={4} py={6}>
                 <Button as="a" borderRadius={50} href="https://github.com/adelaidemz/">
                     Github <ExternalLinkIcon ml={2}/>
                 </Button>
@@ -35,25 +34,28 @@ export default function Home() {
                 <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
             </Stack>
 
+            <Box overflowY="scroll" h="100%">
                 <Page changePage={(page) => { setPage(() => componentPages[page])} }/>
-  
+            </Box>
+
+            {/* <Container centerContent>
+                <Text as="a" fontSize="sm" role="contentinfo" color="gray.500" href="https://github.com/adelaidemz">© 2024 Adelaide Zhang</Text>
+            </Container> */}
         </Container>
     );
 }
 
-function ProjectsResume({changePage}) {
+function ProjectsResume({ changePage }) {
     return (
         <Tabs isFitted>
-            <TabList pt={4}>
+            <TabList mb={5} zIndex="sticky" bgColor="whiteAlpha.900" sx={{ position: 'sticky', top: '0', }}>
                 <Tab>Projects</Tab>
                 <Tab>Resume</Tab>
             </TabList>
 
             <TabPanels>
-                <TabPanel p={0}>
-                    <Button onClick={() => changePage("markov")}>Markov</Button>
-
-                    <SimpleGrid columns={{base: 1, lg: 2}} spacing={5}>
+                <TabPanel p={1} >
+                    <SimpleGrid columns={{base: 1, lg: 2}} spacing={5} justifyItems="center">
                         {cards.map((card) => (
                             <ProjectCard
                                 key={card.id}

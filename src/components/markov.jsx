@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, StackDivider, Heading, Select, Stack } from "@chakra-ui/react"
+import { Button, Heading, Select, Stack, Flex } from "@chakra-ui/react"
 import { Table, TableContainer, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react"
 import { ChevronLeftIcon } from "@chakra-ui/icons"
 
@@ -43,14 +43,15 @@ export default function Markov({changePage}) {
                 <Heading size="lg">Markov chain name generation</Heading>
                 <p>Uses a markov chain to generate stylized names using Javascript.</p>
 
-                <Stack direction="row" alignSelf="center" >
+                <Stack direction="row" spacing={4} alignSelf="center" >
                     <Select placeholder='Select name theme'>
                         <option value='option1'>Fantasy</option>
-                        <option value='option2'>Pokemon</option>
+                        <option value='option2'>(Coming soon)</option>
                     </Select>
 
                     <Button 
                         w="100%"
+                        colorScheme='blue'
                         onClick={() => setOutputNames(generateNames(NUM_NAMES, ORDER))}
                     >
                         Regenerate names
@@ -58,10 +59,12 @@ export default function Markov({changePage}) {
                 </Stack>
             </Stack>
 
-            <Stack direction="row" divider={<StackDivider borderColor='gray.200' />}>
+            <Flex 
+                direction="row"
+            >
                 {/* Input Names */}
-                <TableContainer>
-                    <Table>
+                <TableContainer >
+                    <Table mr="50px">
                         <Thead>
                             <Tr>
                                 <Th>First names</Th>
@@ -81,7 +84,7 @@ export default function Markov({changePage}) {
 
                 {/* Blacklisted names */}
                 <TableContainer>
-                    <Table>
+                    <Table mr="100px">
                         <Thead>
                             <Tr>
                                 <Th>Blacklist</Th>
@@ -97,9 +100,8 @@ export default function Markov({changePage}) {
                     </Table>
                 </TableContainer>
 
-                {/* <StackDivider /> */}
                 {/* Output names */}
-                <TableContainer>
+                <TableContainer bgColor="gray.100" flex="1">
                     <Table>
                         <Thead>
                             <Tr>
@@ -115,7 +117,7 @@ export default function Markov({changePage}) {
                         </Tbody>
                     </Table>
                 </TableContainer>
-            </Stack>
+            </Flex>
         </>
     )
 }

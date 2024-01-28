@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <Container maxW={{base: "95%", md: "80%", xl: "70%"}} h="100%" pt={20} centerContent>
             <Heading>Adelaide Zhang</Heading>
-            <Text as="i">This page is a work in progress</Text>
+            {/* <Text as="i">This page is a work in progress</Text> */}
 
             <Stack direction="row" spacing={4} py={6}>
                 <Button as="a" borderRadius={50} href="https://github.com/adelaidemz/">

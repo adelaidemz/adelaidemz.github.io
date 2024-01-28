@@ -32,16 +32,16 @@ export default function ProjectCard({ name, category, image, desc, link, srclink
             <Divider />
             <CardFooter px={4} py={3} justify="end">
                 <Stack direction="row" spacing='4' align="center">
-                    {srclink && <Link href={srclink} color="blue.200">
+                    {/* {srclink && <Link href={srclink} color="blue.200">
                         Source <ExternalLinkIcon mx='2px' />
-                    </Link>}
+                    </Link>} */}
 
                     {link === "component" 
                         ? <Button variant='solid' colorScheme='blue' onClick={handleNewPage}> 
                             View
                         </Button>
                         : <Button as='a' variant='solid' colorScheme='blue' href={link}>
-                            View
+                            View <ExternalLinkIcon ml='6px' />
                         </Button>
                     }
                         

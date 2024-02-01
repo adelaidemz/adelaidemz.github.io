@@ -18,6 +18,6 @@ export default function Stellar({changePage}) {
                 </Text>
             </Stack>
             <object style={{width:"100%", height:"600px"}} data="/stellar_classification.pdf" type="application/pdf" ></object>
-\        </Box>
+        </Box>
     )
 }

@@ -5,8 +5,8 @@ import Markov from "./components/markov.jsx";
 import Stellar from "./components/stellar.jsx";
 
 import { useState } from 'react';
-import { Button, Box, Container, Heading, IconButton, SimpleGrid, Text, Stack,
-Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue } from '@chakra-ui/react';
+import { Button, Box, Container, Heading, IconButton, SimpleGrid, Stack,
+Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue, Collapse, Slide, useDisclosure } from '@chakra-ui/react';
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 
 
@@ -18,29 +18,41 @@ const componentPages = {
 
 export default function Home() {    
     const [Page, setPage] = useState(() => ProjectsResume);
+    const { isOpen, onToggle } = useDisclosure({defaultIsOpen: true});
 
     return (
-        <Container maxW={{base: "95%", md: "80%", xl: "70%"}} h="100%" pt={20} centerContent>
-            <Heading size="2xl">Adelaide Zhang</Heading>
-            {/* <Text as="i">This page is a work in progress</Text> */}
+        <Container maxW={{base: "95%", md: "80%", xl: "70%"}} 
+            h="100%" 
+            pt={isOpen ? 20 : 5} 
+            centerContent
+        >
+            <Heading 
+                size={isOpen ? "2xl" : "lg"}
+                alignSelf={isOpen ? "" : "end"}
+                mb={2}
+                sx={{ "transition-property": "all", "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                        "transition-duration": "150ms"}}
+            >Adelaide Zhang</Heading>
 
-            <Stack direction="row" spacing={4} py={6}>
-                <Button as="a" 
-                    fontWeight='light'
-                    borderRadius={50} 
-                    href="https://github.com/adelaidemz/"
-                >
-                    Github <ExternalLinkIcon ml={2}/>
-                </Button>
-                <Button as="a" 
-                    fontWeight='light'
-                    borderRadius={50} 
-                    href="https://www.linkedin.com/in/adelaide-zhang"
-                >
-                    LinkedIn <ExternalLinkIcon ml={2}/>
-                </Button>
-                <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
-            </Stack>
+            <Collapse in={isOpen} startingHeight={10} animateOpacity >
+                <Stack direction="row" spacing={4} py={6}>
+                    <Button as="a" 
+                        fontWeight='light'
+                        borderRadius={50} 
+                        href="https://github.com/adelaidemz/"
+                    >
+                        Github <ExternalLinkIcon ml={2}/>
+                    </Button>
+                    <Button as="a" 
+                        fontWeight='light'
+                        borderRadius={50} 
+                        href="https://www.linkedin.com/in/adelaide-zhang"
+                    >
+                        LinkedIn <ExternalLinkIcon ml={2}/>
+                    </Button>
+                    <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
+                </Stack>
+            </Collapse>
 
             <Box overflowY="scroll" h="100%" w="100%">
                 <Page changePage={(page) => { setPage(() => componentPages[page])} }/>

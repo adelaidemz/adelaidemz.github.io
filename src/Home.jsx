@@ -6,7 +6,7 @@ import Stellar from "./components/stellar.jsx";
 
 import { useState } from 'react';
 import { Button, Box, Container, Heading, IconButton, SimpleGrid, Text, Stack,
-Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue } from '@chakra-ui/react';
 import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 
 
@@ -25,10 +25,18 @@ export default function Home() {
             {/* <Text as="i">This page is a work in progress</Text> */}
 
             <Stack direction="row" spacing={4} py={6}>
-                <Button as="a" borderRadius={50} href="https://github.com/adelaidemz/">
+                <Button as="a" 
+                    fontWeight='light'
+                    borderRadius={50} 
+                    href="https://github.com/adelaidemz/"
+                >
                     Github <ExternalLinkIcon ml={2}/>
                 </Button>
-                <Button as="a" borderRadius={50} href="https://www.linkedin.com/in/adelaide-zhang">
+                <Button as="a" 
+                    fontWeight='light'
+                    borderRadius={50} 
+                    href="https://www.linkedin.com/in/adelaide-zhang"
+                >
                     LinkedIn <ExternalLinkIcon ml={2}/>
                 </Button>
                 <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
@@ -48,7 +56,11 @@ export default function Home() {
 function ProjectsResume({ changePage }) {
     return (
         <Tabs isFitted>
-            <TabList mb={5} zIndex="sticky" bgColor="whiteAlpha.900" sx={{ position: 'sticky', top: '0', }}>
+            <TabList mb={5} 
+                zIndex="sticky" 
+                bgColor={useColorModeValue("whiteAlpha.900", "gray.800")}
+                sx={{ position: 'sticky', top: '0', }}
+            >
                 <Tab>Projects</Tab>
                 <Tab>Resume</Tab>
             </TabList>

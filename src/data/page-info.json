@@ -26,7 +26,7 @@
       },
     { 
         "id": 3,
-        "title": "API Microservices (FreeCodeCamp)", 
+        "title": "API microservices (FreeCodeCamp)", 
         "category": "Backend API",
         "image": "/fcc.png",
         "text": "Projects for FreeCodeCamp\"s Backend Development and APIs course. Node and Express, hosted on Render.", 

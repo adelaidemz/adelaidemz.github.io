@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, CardBody, CardFooter, Divider, Link, Button, Heading, Image, Text, Stack } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter, Divider, Button, Heading, Image, Text, Stack } from '@chakra-ui/react';
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function ProjectCard({ name, category, image, desc, link, srclink, handleNewPage }) {

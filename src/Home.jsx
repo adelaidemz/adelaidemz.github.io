@@ -27,12 +27,16 @@ export default function Home() {
             centerContent
         >
             <Heading 
-                size={isOpen ? "2xl" : "lg"}
+                size={isOpen ? "3xl" : "lg"}
                 alignSelf={isOpen ? "" : "end"}
                 mb={2}
-                sx={{ "transition-property": "all", "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
-                        "transition-duration": "150ms"}}
-            >Adelaide Zhang</Heading>
+                fontFamily={"Aquawax Pro Trial, sans-serif"}
+                fontWeight="semiBold"
+                letterSpacing="wide"
+                sx={{ "transitionProperty": "all", "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+                        "transitionDuration": "300ms"}}
+            // >ADELAIDE ZHANG</Heading>
+             >Adelaide Zhang</Heading> 
 
             <Collapse in={isOpen} startingHeight={10} animateOpacity >
                 <Stack direction="row" spacing={4} py={6}>
@@ -54,8 +58,20 @@ export default function Home() {
                 </Stack>
             </Collapse>
 
-            <Box overflowY="scroll" h="100%" w="100%">
-                <Page changePage={(page) => { setPage(() => componentPages[page])} }/>
+            <Box overflowY="scroll" h="100%" w="100%" position="relative">
+                <Slide in={isOpen} direction="left" style={{position: "absolute"}}>
+                    <ProjectsResume 
+                        changePage={(page) => { 
+                            setPage(() => componentPages[page]);
+                            onToggle();
+                        }}
+                    />
+                </Slide>
+                <Slide in={!isOpen} style={{position: "absolute"}}>
+                    <Page 
+                        changePage={onToggle}
+                    />
+                </Slide>
             </Box>
 
             {/* <Container centerContent>

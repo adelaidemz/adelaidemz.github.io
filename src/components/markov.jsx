@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, Heading, Select, Stack, Flex } from "@chakra-ui/react"
+import { Button, Heading, Select, Stack, Flex, useColorModeValue } from "@chakra-ui/react"
 import { Table, TableContainer, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react"
 import { ChevronLeftIcon } from "@chakra-ui/icons"
 
@@ -36,7 +36,7 @@ export default function Markov({changePage}) {
             <Stack spacing={3} my={8} alignItems="start" >
                 <Button
                     variant="link"
-                    onClick={() => changePage(0)}
+                    onClick={changePage}
                 ><ChevronLeftIcon mr="5px"/>Back
                 </Button>
 
@@ -101,7 +101,7 @@ export default function Markov({changePage}) {
                 </TableContainer>
 
                 {/* Output names */}
-                <TableContainer bgColor="gray.100" flex="1">
+                <TableContainer  bgColor={useColorModeValue("gray.100", "gray.900")} flex="1">
                     <Table>
                         <Thead>
                             <Tr>

@@ -2,6 +2,7 @@ import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Home from "./Home.jsx";
+import "./styles.css"
 
 const colorTheme = {
   // auto light/dark mode based on system
@@ -12,8 +13,8 @@ const colorTheme = {
 const config = extendTheme({
   colorTheme,
   fonts: {
-    heading: 'Inter, sans-serif',
-    text: 'Circular Std Book, sans-serif',
+    heading: 'Aquawax Pro Trial, sans-serif',
+    text: 'Inter, sans-serif',
   },
   components: {
       Button: {
@@ -22,11 +23,6 @@ const config = extendTheme({
                   fontWeight: 'light',
                   borderRadius: 50,
                 },
-          }
-      },
-      Heading: {
-          baseStyle: {
-              fontWeight: 500,
           }
       },
   }

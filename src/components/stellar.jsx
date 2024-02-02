@@ -7,7 +7,7 @@ export default function Stellar({changePage}) {
             <Stack spacing={3} my={3} alignItems="start" >
                 <Button
                     variant="link"
-                    onClick={() => changePage(0)}
+                    onClick={changePage}
                 ><ChevronLeftIcon mr="5px"/>Back
                 </Button>
 

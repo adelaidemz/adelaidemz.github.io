@@ -81,7 +81,7 @@ export default function Home() {
                         }}
                     />
                 </Slide>
-                <Slide in={!isOpen} style={{position: "absolute"}}>
+                <Slide in={!isOpen} style={{position: "absolute"}} unmountOnExit>
                     <Page 
                         changePage={onToggle}
                     />
@@ -103,8 +103,20 @@ function ProjectsResume({ changePage }) {
                 bgColor={useColorModeValue("whiteAlpha.900", "gray.800")}
                 sx={{ position: 'sticky', top: '0', }}
             >
-                <Tab>Projects</Tab>
-                <Tab>Resume</Tab>
+                <Tab 
+                    fontWeight="bold"
+                    fontSize="sm"
+                    letterSpacing="wide"
+                >
+                    PROJECTS
+                </Tab>
+                <Tab
+                    fontWeight="bold"
+                    fontSize="sm"
+                    letterSpacing="wide"
+                >
+                    RESUMÉ
+                </Tab>
             </TabList>
 
             <TabPanels>

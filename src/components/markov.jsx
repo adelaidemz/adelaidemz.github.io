@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { Button, Heading, Select, Stack, Flex, useColorModeValue } from "@chakra-ui/react"
-import { Table, TableContainer, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react"
-import { ChevronLeftIcon } from "@chakra-ui/icons"
+import { Button, Select, Stack, Flex, useColorModeValue, 
+    Table, TableContainer, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react"
+import PageFrame from './PageFrame.jsx';
 
 import data from '../data/markov-names.json';
 import { generateNames } from '../js/markov.js';
@@ -25,38 +25,27 @@ for (let i = 0; i < data.first_names.length; i++) {
 const blacklist_names = data.blacklist;
 
 export default function Markov({changePage}) {
-    // let input_names = [];
     const [outputNames, setOutputNames] = useState(() => generateNames( NUM_NAMES, ORDER));
-    // useEffect(() => {
-        
-    // }, []);
 
     return (
-        <>
-            <Stack spacing={3} my={8} alignItems="start" >
-                <Button
-                    variant="link"
-                    onClick={changePage}
-                ><ChevronLeftIcon mr="5px"/>Back
+        <PageFrame
+            title="Markov chain name generation"
+            text="Uses a markov chain to generate stylized names using Javascript."
+            changePage={changePage}
+        >
+            <Stack direction="row" spacing={4} pb={4} alignSelf="center" >
+                <Select placeholder='Select name theme'>
+                    <option value='option1'>Fantasy</option>
+                    <option value='option2'>(Coming soon)</option>
+                </Select>
+
+                <Button 
+                    w="100%"
+                    colorScheme='blue'
+                    onClick={() => setOutputNames(generateNames(NUM_NAMES, ORDER))}
+                >
+                    Regenerate names
                 </Button>
-
-                <Heading size="lg">Markov chain name generation</Heading>
-                <p>Uses a markov chain to generate stylized names using Javascript.</p>
-
-                <Stack direction="row" spacing={4} alignSelf="center" >
-                    <Select placeholder='Select name theme'>
-                        <option value='option1'>Fantasy</option>
-                        <option value='option2'>(Coming soon)</option>
-                    </Select>
-
-                    <Button 
-                        w="100%"
-                        colorScheme='blue'
-                        onClick={() => setOutputNames(generateNames(NUM_NAMES, ORDER))}
-                    >
-                        Regenerate names
-                    </Button>
-                </Stack>
             </Stack>
 
             <Flex 
@@ -118,6 +107,6 @@ export default function Markov({changePage}) {
                     </Table>
                 </TableContainer>
             </Flex>
-        </>
+        </PageFrame>
     )
 }

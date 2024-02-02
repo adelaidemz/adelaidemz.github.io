@@ -6,7 +6,7 @@ import Stellar from "./components/stellar.jsx";
 
 import { useState } from 'react';
 import { Button, ButtonGroup, Box, Container, Heading, IconButton, SimpleGrid, 
-Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue, Collapse, Slide, useDisclosure } from '@chakra-ui/react';
+Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue, Slide, useDisclosure } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
 import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
@@ -40,8 +40,9 @@ export default function Home() {
 
                 <ButtonGroup 
                     size={isOpen ? "md" : "sm"}
-                    spacing={isOpen ? 4 : 2} 
-                    py={isOpen ? 4 : 0}
+                    spacing={isOpen ? 4 : 2}
+                    pt={isOpen ? 4 : 0}
+                    pb={isOpen ? 4 : 8}
                     sx={{ "transitionProperty": "all", "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
                         "transitionDuration": "300ms"}}
                 >

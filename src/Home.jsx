@@ -5,9 +5,10 @@ import Markov from "./components/markov.jsx";
 import Stellar from "./components/stellar.jsx";
 
 import { useState } from 'react';
-import { Button, Box, Container, Heading, IconButton, SimpleGrid, Stack,
+import { Button, ButtonGroup, Box, Container, Heading, IconButton, SimpleGrid, 
 Tabs, TabList, TabPanels, Tab, TabPanel, useColorModeValue, Collapse, Slide, useDisclosure } from '@chakra-ui/react';
-import { EmailIcon, ExternalLinkIcon } from '@chakra-ui/icons';
+import { EmailIcon } from '@chakra-ui/icons';
+import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
 
 const componentPages = {
@@ -26,37 +27,49 @@ export default function Home() {
             pt={isOpen ? 20 : 5} 
             centerContent
         >
-            <Heading 
-                size={isOpen ? "3xl" : "lg"}
-                alignSelf={isOpen ? "" : "end"}
-                mb={2}
-                fontFamily={"Aquawax Pro Trial, sans-serif"}
-                fontWeight="semiBold"
-                letterSpacing="wide"
-                sx={{ "transitionProperty": "all", "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
-                        "transitionDuration": "300ms"}}
-            // >ADELAIDE ZHANG</Heading>
-             >Adelaide Zhang</Heading> 
+            <Box display="flex" flexDirection="column" w="100%" alignItems={isOpen ? "center" : "end"}>           
+                <Heading 
+                    size={isOpen ? "3xl" : "lg"}
+                    fontFamily={"Aquawax Pro Trial, sans-serif"}
+                    fontWeight="semiBold"
+                    letterSpacing="wide"
+                    sx={{ "transitionProperty": "all", "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+                            "transitionDuration": "300ms"}}
+                // >ADELAIDE ZHANG</Heading>
+                >Adelaide Zhang</Heading> 
 
-            <Collapse in={isOpen} startingHeight={10} animateOpacity >
-                <Stack direction="row" spacing={4} py={6}>
+                <ButtonGroup 
+                    size={isOpen ? "md" : "sm"}
+                    spacing={isOpen ? 4 : 2} 
+                    py={isOpen ? 4 : 0}
+                    sx={{ "transitionProperty": "all", "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+                        "transitionDuration": "300ms"}}
+                >
                     <Button as="a" 
                         fontWeight='light'
                         borderRadius={50} 
                         href="https://github.com/adelaidemz/"
+                        rightIcon={<FaGithub />}
+                        iconSpacing={isOpen ? 2 : 0}
                     >
-                        Github <ExternalLinkIcon ml={2}/>
+                        {isOpen && "Github"}
                     </Button>
                     <Button as="a" 
                         fontWeight='light'
                         borderRadius={50} 
                         href="https://www.linkedin.com/in/adelaide-zhang"
+                        rightIcon={<FaLinkedin />}
+                        iconSpacing={isOpen ? 2 : 0}
                     >
-                        LinkedIn <ExternalLinkIcon ml={2}/>
+                        {isOpen && "LinkedIn"}
                     </Button>
-                    <IconButton as="a" isRound icon={<EmailIcon/>} href="mailto:adelaidemzhang@gmail.com"/>
-                </Stack>
-            </Collapse>
+                    <IconButton as="a" 
+                        href="mailto:adelaidemzhang@gmail.com"
+                        icon={<EmailIcon/>}
+                        isRound 
+                    />
+                </ButtonGroup>
+            </Box>
 
             <Box overflowY="scroll" h="100%" w="100%" position="relative">
                 <Slide in={isOpen} direction="left" style={{position: "absolute"}}>
